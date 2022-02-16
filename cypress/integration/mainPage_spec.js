@@ -27,6 +27,11 @@ context('Main Page', () => {
 
   it('User should see a list of reservation card', () => {
     cy.get('.reservation-book')
+    cy.get('.reservation-card')
+    cy.get('h2').contains('Marie')
+    cy.get('h4').contains('10/50')
+    cy.get('h4').contains('4:45')
+    cy.get('h4').contains('12')
     
   })
 
