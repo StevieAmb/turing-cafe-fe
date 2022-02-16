@@ -1,7 +1,10 @@
 
 context('Main Page', () => {
   beforeEach(() => {
+    cy.intercept('http://localhost:3001/api/v1/reservations', { fixture: 'example.json' })
     cy.visit('http://localhost:3000/')
+      
+      
   })
 
   it('User should see the page title at top of page', () => {
@@ -20,6 +23,11 @@ context('Main Page', () => {
     cy.get('#date').type('15/05')
     cy.get('#time').type('4:45PM')
     cy.get('#number').type('3')
+  })
+
+  it('User should see a list of reservation card', () => {
+    cy.get('.reservation-book')
+    
   })
 
   //user should see list of reservation cards
