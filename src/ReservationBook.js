@@ -18,7 +18,7 @@ const ReservationBook = ({reservations}) => {
   
   
   return (
-    <div>
+    <div className="reservation-book">
       {allReservations}
     </div>
   )
