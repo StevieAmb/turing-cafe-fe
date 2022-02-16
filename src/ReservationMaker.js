@@ -18,6 +18,11 @@ class ReservationMaker extends Component {
       ...this.state
     }
     this.props.addReservation(newReservation)
+    this.clearInput()
+  }
+
+  clearInput = () => {
+    this.setState({name: '', date: '', time: '', number: '' })
   }
 
   handleChange = (event) => {
@@ -39,7 +44,7 @@ class ReservationMaker extends Component {
 
       <input 
         type="text" 
-        id="start" 
+        id="date" 
         name="date"
         placeholder="Date (dd/mm)"
         value={this.state.date}
@@ -60,13 +65,13 @@ class ReservationMaker extends Component {
       <input
         id="number"
         type="text"
-        name="name"
+        name="number"
         placeholder="Number of Guests"
         value={this.state.number}
         onChange={event => this.handleChange(event)}
         required
         />
-      <button onClick="">Make Reservation</button>
+      <button onClick={event => this.submitReservation(event)}>Make Reservation</button>
       </form>
     )
   }
