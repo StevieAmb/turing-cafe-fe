@@ -1,5 +1,15 @@
+[
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "name": "Marie",
+  "date": "10/50",
+  "time": "4:45",
+  "number": "12"
+},
+
+{
+  "name": "June",
+  "date": "11/3",
+  "time": "3:50",
+  "number": "5"
 }
+]
